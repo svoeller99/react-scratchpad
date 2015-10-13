@@ -4,7 +4,8 @@
   "description": "test react app",
   "main": "index.js",
   "scripts": {
-    "start": "watchify index.js -v -t babelify -o bundle.js"
+    "start": "watchify index.js -v -t babelify -o bundle.js",
+    "build": "./node_modules/browserify/bin/cmd.js index.js -v -t babelify -d -p [minifyify --no-map] -o bundle.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/svoeller99/react-scratchpad#readme",
   "devDependencies": {
     "babelify": "^6.3.0",
+    "minifyify": "^7.1.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "watchify": "^3.4.0"
